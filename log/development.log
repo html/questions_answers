@@ -1,0 +1,763 @@
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateQuestionsAnswersExistings (1)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE TABLE "questions_answers_existing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" text NOT NULL, "answer" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to CreateQuestionsAnswersNews (2)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE TABLE "questions_answers_news" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" text NOT NULL, "answer" text, "order" integer, "eta" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("questions_answers_existing")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("questions_answers_news")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE "questions_answers_existing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" text NOT NULL, "answer" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "questions_answers_news" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" text NOT NULL, "answer" text, "order" integer, "eta" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('2')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('1')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "questions_answers_existing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" text NOT NULL, "answer" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mCREATE TABLE "questions_answers_news" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" text NOT NULL, "answer" text, "order" integer, "eta" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('2')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('1')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateQuestionsAnswersExistings (1)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "questions_answers_existing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" text NOT NULL, "answer" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to CreateQuestionsAnswersNews (2)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "questions_answers_new" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" text NOT NULL, "answer" text, "order" integer, "eta" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("questions_answers_existing")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("questions_answers_new")[0m
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:50:35) [GET]
+Rendering qa/index
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:50:52) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (1.2ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+Rendering qa/index
+Completed in 19ms (View: 2, DB: 1) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:51:40) [GET]
+  [4;35;1mQuestionsAnswersExisting Load (1.0ms)[0m   [0mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;36;1mQuestionsAnswersNew Load (0.0ms)[0m   [0;1mSQLite3::SQLException: near "order": syntax error: SELECT * FROM "questions_answers_new" ORDER BY order[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near "order": syntax error: SELECT * FROM "questions_answers_new"  ORDER BY order):
+  app/controllers/qa_controller.rb:4:in `index'
+  <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (114.3ms)
+Rendered rescues/_request_and_response (2.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:51:55) [GET]
+  [4;35;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;36;1mQuestionsAnswersNew Load (0.3ms)[0m   [0;1mSELECT * FROM "questions_answers_new" ORDER BY `order`[0m
+Rendering qa/index
+Completed in 25ms (View: 13, DB: 1) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:52:30) [GET]
+  [4;35;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;36;1mQuestionsAnswersNew Load (0.3ms)[0m   [0;1mSELECT * FROM "questions_answers_new" ORDER BY `order`[0m
+Rendering qa/index
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:52:36) [GET]
+  [4;35;1mQuestionsAnswersExisting Load (0.6ms)[0m   [0mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;36;1mQuestionsAnswersNew Load (0.4ms)[0m   [0;1mSELECT * FROM "questions_answers_new" ORDER BY `order`[0m
+Rendering qa/index
+Completed in 30ms (View: 15, DB: 1) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:53:24) [GET]
+  [4;35;1mQuestionsAnswersExisting Load (1.0ms)[0m   [0mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;36;1mQuestionsAnswersNew Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_new" ORDER BY `order`[0m
+Rendering qa/index
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #21 of app/views/qa/index.erb:
+18:   </table>
+19: <% end %>
+20: 
+21: <% form_for  %>
+
+    app/views/qa/index.erb:21
+    <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (107.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:54:24) [GET]
+  [4;35;1mQuestionsAnswersExisting Load (1.2ms)[0m   [0mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;36;1mQuestionsAnswersNew Load (0.6ms)[0m   [0;1mSELECT * FROM "questions_answers_new" ORDER BY `order`[0m
+Rendering qa/index
+Completed in 281ms (View: 253, DB: 2) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:54:32) [GET]
+  [4;35;1mQuestionsAnswersExisting Load (1.0ms)[0m   [0mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;36;1mQuestionsAnswersNew Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_new" ORDER BY `order`[0m
+Rendering qa/index
+Completed in 46ms (View: 20, DB: 2) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:54:35) [GET]
+  [4;35;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;36;1mQuestionsAnswersNew Load (0.3ms)[0m   [0;1mSELECT * FROM "questions_answers_new" ORDER BY `order`[0m
+Rendering qa/index
+Completed in 33ms (View: 16, DB: 1) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:54:41) [GET]
+  [4;35;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;36;1mQuestionsAnswersNew Load (0.3ms)[0m   [0;1mSELECT * FROM "questions_answers_new" ORDER BY `order`[0m
+Rendering qa/index
+Completed in 28ms (View: 15, DB: 1) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:56:56) [GET]
+  [4;35;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `acts_as_list' for QuestionsAnswersNew(Table doesn't exist):Class):
+  app/models/questions_answers_new.rb:2:in `<class:QuestionsAnswersNew>'
+  app/models/questions_answers_new.rb:1:in `<top (required)>'
+  app/controllers/qa_controller.rb:4:in `index'
+  <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (175.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:57:25) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (0.7ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.3ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY `order`[0m
+Rendering qa/index
+Completed in 156ms (View: 143, DB: 1) | 200 OK [http://pi.ua/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateQuestionsAnswersExistings (1)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "questions_answers_existing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" text NOT NULL, "answer" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to CreateQuestionsAnswersNews (2)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "questions_answers_new" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" text NOT NULL, "answer" text, "position" integer, "eta" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("questions_answers_existing")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("questions_answers_new")[0m
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:58:18) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (1.0ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.5ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 34ms (View: 7, DB: 2) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:59:24) [POST]
+  Parameters: {"authenticity_token"=>"xmP9Lfoz2LpG0HmWvn9T8fRDrfxVuC4NZ3M0XEXBKjc=", "questions_answers_new"=>{"question"=>""}, "commit"=>"Save changes"}
+  [4;36;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.4ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 25ms (View: 3, DB: 1) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:59:39) [POST]
+  Parameters: {"authenticity_token"=>"xmP9Lfoz2LpG0HmWvn9T8fRDrfxVuC4NZ3M0XEXBKjc=", "questions_answers_new"=>{"question"=>""}, "commit"=>"Save changes"}
+  [4;36;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.3ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 37ms (View: 15, DB: 1) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:59:41) [POST]
+  Parameters: {"authenticity_token"=>"xmP9Lfoz2LpG0HmWvn9T8fRDrfxVuC4NZ3M0XEXBKjc=", "questions_answers_new"=>{"question"=>""}, "commit"=>"Save changes"}
+  [4;36;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.3ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 31ms (View: 3, DB: 1) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:59:43) [POST]
+  Parameters: {"authenticity_token"=>"xmP9Lfoz2LpG0HmWvn9T8fRDrfxVuC4NZ3M0XEXBKjc=", "questions_answers_new"=>{"question"=>"asdf"}, "commit"=>"Save changes"}
+  [4;36;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.3ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+  [4;36;1mQuestionsAnswersNew Load (0.4ms)[0m   [0;1mSELECT * FROM "questions_answers_new" WHERE (1 = 1) ORDER BY position DESC, position LIMIT 1[0m
+  [4;35;1mQuestionsAnswersNew Create (0.6ms)[0m   [0mINSERT INTO "questions_answers_new" ("question", "answer", "position", "eta", "created_at", "updated_at") VALUES('asdf', NULL, 1, NULL, '2010-08-26 18:59:43', '2010-08-26 18:59:43')[0m
+Redirected to http://pi.ua:3000/
+Completed in 27ms (DB: 2) | 302 Found [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:59:43) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (0.6ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.7ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 24ms (View: 10, DB: 1) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:59:53) [POST]
+  Parameters: {"authenticity_token"=>"xmP9Lfoz2LpG0HmWvn9T8fRDrfxVuC4NZ3M0XEXBKjc=", "questions_answers_new"=>{"question"=>"asdfasdf"}, "commit"=>"Save changes"}
+  [4;36;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.6ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+  [4;36;1mQuestionsAnswersNew Load (0.6ms)[0m   [0;1mSELECT * FROM "questions_answers_new" WHERE (1 = 1) ORDER BY position DESC, position LIMIT 1[0m
+  [4;35;1mQuestionsAnswersNew Create (0.3ms)[0m   [0mINSERT INTO "questions_answers_new" ("question", "answer", "position", "eta", "created_at", "updated_at") VALUES('asdfasdf', NULL, 2, NULL, '2010-08-26 18:59:53', '2010-08-26 18:59:53')[0m
+Redirected to http://pi.ua:3000/
+Completed in 26ms (DB: 2) | 302 Found [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:59:53) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.8ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:59:55) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (1.0ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (1.6ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 40ms (View: 11, DB: 3) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 21:59:56) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (0.6ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.8ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 33ms (View: 11, DB: 1) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:00:02) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (1.0ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (1.6ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 55ms (View: 26, DB: 3) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:00:05) [POST]
+  Parameters: {"authenticity_token"=>"xmP9Lfoz2LpG0HmWvn9T8fRDrfxVuC4NZ3M0XEXBKjc=", "questions_answers_new"=>{"question"=>"", "answer"=>"asdf"}, "commit"=>"Save changes"}
+  [4;36;1mQuestionsAnswersExisting Load (1.0ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (1.5ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 55ms (View: 12, DB: 2) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:00:12) [POST]
+  Parameters: {"authenticity_token"=>"xmP9Lfoz2LpG0HmWvn9T8fRDrfxVuC4NZ3M0XEXBKjc=", "questions_answers_new"=>{"question"=>"", "answer"=>"asdfasdf"}, "commit"=>"Save changes"}
+  [4;36;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.8ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 27ms (View: 6, DB: 1) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:00:36) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.8ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 46ms (View: 24, DB: 1) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:00:39) [POST]
+  Parameters: {"authenticity_token"=>"xmP9Lfoz2LpG0HmWvn9T8fRDrfxVuC4NZ3M0XEXBKjc=", "questions_answers_new"=>{"question"=>"", "answer"=>"asdf"}, "commit"=>"Save changes"}
+  [4;36;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.8ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+
+ActionView::TemplateError (undefined method `questions_answers_news_path' for #<ActionView::Base:0x9eebd44>) on line #21 of app/views/qa/index.erb:
+18:   </table>
+19: <% end %>
+20: 
+21: <% form_for @item || :questions_answers_new do |f| %>
+22:   <%= f.error_messages %>
+23:   <p>
+24:     Question <br/>
+
+    app/views/qa/index.erb:21
+    <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (116.2ms)
+Rendered rescues/_request_and_response (2.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:00:50) [POST]
+  Parameters: {"authenticity_token"=>"xmP9Lfoz2LpG0HmWvn9T8fRDrfxVuC4NZ3M0XEXBKjc=", "questions_answers_new"=>{"question"=>"", "answer"=>"asdf"}, "commit"=>"Save changes"}
+  [4;36;1mQuestionsAnswersExisting Load (0.7ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.9ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+
+ActionView::TemplateError (undefined method `questions_answers_news_path' for #<ActionView::Base:0x83f5254>) on line #21 of app/views/qa/index.erb:
+18:   </table>
+19: <% end %>
+20: 
+21: <% form_for @item do |f| %>
+22:   <%= f.error_messages %>
+23:   <p>
+24:     Question <br/>
+
+    app/views/qa/index.erb:21
+    <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (184.5ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:01:01) [POST]
+  Parameters: {"authenticity_token"=>"xmP9Lfoz2LpG0HmWvn9T8fRDrfxVuC4NZ3M0XEXBKjc=", "questions_answers_new"=>{"question"=>"", "answer"=>"asdf"}, "commit"=>"Save changes"}
+  [4;36;1mQuestionsAnswersExisting Load (1.1ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (1.0ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+
+ActionView::TemplateError (undefined method `questions_answers_news_path' for #<ActionView::Base:0xa30d4b4>) on line #21 of app/views/qa/index.erb:
+18:   </table>
+19: <% end %>
+20: 
+21: <% form_for @item, :html => { :action => root_path } do |f| %>
+22:   <%= f.error_messages %>
+23:   <p>
+24:     Question <br/>
+
+    app/views/qa/index.erb:21
+    <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (191.4ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:01:10) [POST]
+  Parameters: {"authenticity_token"=>"xmP9Lfoz2LpG0HmWvn9T8fRDrfxVuC4NZ3M0XEXBKjc=", "questions_answers_new"=>{"question"=>"", "answer"=>"asdf"}, "commit"=>"Save changes"}
+  [4;36;1mQuestionsAnswersExisting Load (0.6ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.8ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+
+ActionView::TemplateError (undefined method `questions_answers_news_path' for #<ActionView::Base:0xa6c3b70>) on line #21 of app/views/qa/index.erb:
+18:   </table>
+19: <% end %>
+20: 
+21: <% form_for @item, :action => root_path do |f| %>
+22:   <%= f.error_messages %>
+23:   <p>
+24:     Question <br/>
+
+    app/views/qa/index.erb:21
+    <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (114.8ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:01:11) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (0.6ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.9ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #21 of app/views/qa/index.erb:
+18:   </table>
+19: <% end %>
+20: 
+21: <% form_for @item, :action => root_path do |f| %>
+22:   <%= f.error_messages %>
+23:   <p>
+24:     Question <br/>
+
+    app/views/qa/index.erb:21
+    <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (113.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:01:13) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.8ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #21 of app/views/qa/index.erb:
+18:   </table>
+19: <% end %>
+20: 
+21: <% form_for @item, :action => root_path do |f| %>
+22:   <%= f.error_messages %>
+23:   <p>
+24:     Question <br/>
+
+    app/views/qa/index.erb:21
+    <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (192.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:01:30) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.8ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+
+ActionView::TemplateError (undefined method `questions_answers_news_path' for #<ActionView::Base:0xa42e958>) on line #21 of app/views/qa/index.erb:
+18:   </table>
+19: <% end %>
+20: 
+21: <% form_for @item || QuestionsAnswersNew.new, :action => root_path do |f| %>
+22:   <%= f.error_messages %>
+23:   <p>
+24:     Question <br/>
+
+    app/views/qa/index.erb:21
+    <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (195.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:02:41) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (1.1ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (1.6ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+
+ActionView::TemplateError (undefined method `questions_answers_news_path' for #<ActionView::Base:0xa516250>) on line #21 of app/views/qa/index.erb:
+18:   </table>
+19: <% end %>
+20: 
+21: <% form_for @item || QuestionsAnswersNew.new do |f| %>
+22:   <%= f.error_messages %>
+23:   <p>
+24:     Question <br/>
+
+    app/views/qa/index.erb:21
+    <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (113.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:02:43) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (0.6ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.8ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+
+ActionView::TemplateError (undefined method `questions_answers_news_path' for #<ActionView::Base:0x967b488>) on line #21 of app/views/qa/index.erb:
+18:   </table>
+19: <% end %>
+20: 
+21: <% form_for @item || QuestionsAnswersNew.new do |f| %>
+22:   <%= f.error_messages %>
+23:   <p>
+24:     Question <br/>
+
+    app/views/qa/index.erb:21
+    <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (114.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:02:44) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (0.9ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (1.7ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+
+ActionView::TemplateError (undefined method `questions_answers_news_path' for #<ActionView::Base:0x9bc15fc>) on line #21 of app/views/qa/index.erb:
+18:   </table>
+19: <% end %>
+20: 
+21: <% form_for @item || QuestionsAnswersNew.new do |f| %>
+22:   <%= f.error_messages %>
+23:   <p>
+24:     Question <br/>
+
+    app/views/qa/index.erb:21
+    <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (186.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:02:53) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.8ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+
+ActionView::TemplateError (undefined method `questions_answers_news_path' for #<ActionView::Base:0xa358bfc>) on line #21 of app/views/qa/index.erb:
+18:   </table>
+19: <% end %>
+20: 
+21: <% form_for @item || QuestionsAnswersNew.new do |f| %>
+22:   <%= f.error_messages %>
+23:   <p>
+24:     Question <br/>
+
+    app/views/qa/index.erb:21
+    <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (199.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:02:53) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.8ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+
+ActionView::TemplateError (undefined method `questions_answers_news_path' for #<ActionView::Base:0xa67a194>) on line #21 of app/views/qa/index.erb:
+18:   </table>
+19: <% end %>
+20: 
+21: <% form_for @item || QuestionsAnswersNew.new do |f| %>
+22:   <%= f.error_messages %>
+23:   <p>
+24:     Question <br/>
+
+    app/views/qa/index.erb:21
+    <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (154.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:02:56) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.8ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+
+ActionView::TemplateError (undefined method `questions_answers_news_path' for #<ActionView::Base:0xa393730>) on line #21 of app/views/qa/index.erb:
+18:   </table>
+19: <% end %>
+20: 
+21: <% form_for @item || QuestionsAnswersNew.new do |f| %>
+22:   <%= f.error_messages %>
+23:   <p>
+24:     Question <br/>
+
+    app/views/qa/index.erb:21
+    <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (113.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:04:21) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (0.7ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.9ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 133ms (View: 119, DB: 2) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:04:25) [POST]
+  Parameters: {"authenticity_token"=>"xmP9Lfoz2LpG0HmWvn9T8fRDrfxVuC4NZ3M0XEXBKjc=", "questions_answers_new"=>{"question"=>"", "answer"=>"asdf"}, "commit"=>"Save changes"}
+  [4;36;1mQuestionsAnswersExisting Load (1.0ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.8ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+
+ActionView::TemplateError (undefined method `questions_answers_news_path' for #<ActionView::Base:0x9cf654c>) on line #21 of app/views/qa/index.erb:
+18:   </table>
+19: <% end %>
+20: 
+21: <% form_for @item || :questions_answers_new do |f| %>
+22:   <%= f.error_messages %>
+23:   <p>
+24:     Question <br/>
+
+    app/views/qa/index.erb:21
+    <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (169.4ms)
+Rendered rescues/_request_and_response (2.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:04:47) [POST]
+  Parameters: {"authenticity_token"=>"xmP9Lfoz2LpG0HmWvn9T8fRDrfxVuC4NZ3M0XEXBKjc=", "questions_answers_new"=>{"question"=>"", "answer"=>"asdf"}, "commit"=>"Save changes"}
+  [4;36;1mQuestionsAnswersExisting Load (1.1ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (1.7ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 181ms (View: 135, DB: 3) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:04:57) [POST]
+  Parameters: {"authenticity_token"=>"xmP9Lfoz2LpG0HmWvn9T8fRDrfxVuC4NZ3M0XEXBKjc=", "questions_answers_new"=>{"question"=>"asdfasdf", "answer"=>"asdf"}, "commit"=>"Save changes"}
+  [4;36;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.8ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+  [4;36;1mQuestionsAnswersNew Load (0.7ms)[0m   [0;1mSELECT * FROM "questions_answers_new" WHERE (1 = 1) ORDER BY position DESC, position LIMIT 1[0m
+  [4;35;1mQuestionsAnswersNew Create (0.6ms)[0m   [0mINSERT INTO "questions_answers_new" ("question", "answer", "position", "eta", "created_at", "updated_at") VALUES('asdfasdf', 'asdf', 3, NULL, '2010-08-26 19:04:57', '2010-08-26 19:04:57')[0m
+Redirected to http://pi.ua:3000/
+Completed in 28ms (DB: 3) | 302 Found [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:04:57) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (0.6ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (0.9ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 27ms (View: 13, DB: 2) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:07:20) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (1.0ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (1.9ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 55ms (View: 26, DB: 3) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:07:22) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (1.0ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (2.1ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 60ms (View: 27, DB: 3) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:07:38) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (1.0ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 36ms (View: 21, DB: 2) | 200 OK [http://pi.ua/]
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:08:44) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (0.5ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (1.0ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+
+ActionView::TemplateError (undefined method `strftime' for nil:NilClass) on line #31 of app/views/qa/index.erb:
+28:       <tr>
+29:         <td><%=h item.question %></td>
+30:         <td><%=h item.answer %></td>
+31:         <td><%= display_eta item %></td>
+32:       </tr>
+33:     <% end %>
+34:   </table>
+
+    app/helpers/application_helper.rb:4:in `display_eta'
+    app/views/qa/index.erb:31:in `block in _run_erb_app47views47qa47index46erb'
+    app/views/qa/index.erb:27:in `each'
+    app/views/qa/index.erb:27
+    <internal:prelude>:8:in `synchronize'
+
+Rendered rescues/_trace (114.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QaController#index (for 127.0.0.1 at 2010-08-26 22:08:56) [GET]
+  [4;36;1mQuestionsAnswersExisting Load (1.0ms)[0m   [0;1mSELECT * FROM "questions_answers_existing" ORDER BY id[0m
+  [4;35;1mQuestionsAnswersNew Load (2.0ms)[0m   [0mSELECT * FROM "questions_answers_new" ORDER BY position[0m
+Rendering qa/index
+Completed in 40ms (View: 9, DB: 3) | 200 OK [http://pi.ua/]

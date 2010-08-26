@@ -1,0 +1,48 @@
+<% if @existing.empty? %>
+  Not existing questions/answers
+<% else %>
+  <table>
+    <tr>
+      <td>Question</td>
+      <td>Answer</td>
+    </tr>
+    <% @existing.each do |item| %>
+      <tr>
+        <td><%=h item.question %></td>
+        <td><%=h item.answer %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+<br/>
+<% if @new.empty? %>
+  Not new questions/answers
+<% else %>
+  <table>
+    <tr>
+      <td>Question</td>
+      <td>Answer</td>
+      <td>Eta</td>
+    </tr>
+    <% @new.each do |item| %>
+      <tr>
+        <td><%=h item.question %></td>
+        <td><%=h item.answer %></td>
+        <td><%= display_eta item %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+
+<% form_for @item || :questions_answers_new, :url => root_url do |f| %>
+  <%= f.error_messages %>
+  <p>
+    Question <br/>
+    <%= f.text_area :question, :rows => 5 %>
+  </p>
+  <p>
+  Answer <br />
+  <%= f.text_area :answer, :rows => 5 %>
+  </p>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,39 @@
+ActsAsList
+==========
+
+This acts_as extension provides the capabilities for sorting and reordering a number of objects in a list. The class that has this specified needs to have a +position+ column defined as an integer on the mapped database table.
+Unlike standard rails acts_as_list plugin from which it has been forked, this plugin can do one little thing more
+
+
+Example
+=======
+
+  class TodoList < ActiveRecord::Base
+    has_many :todo_items, :order => "position"
+  end
+
+  class TodoItem < ActiveRecord::Base
+    belongs_to :todo_list
+    acts_as_list :scope => :todo_list
+  end
+
+  todo_list.first.move_to_bottom
+  todo_list.last.move_higher
+
+
+And surprise ^^
+===============
+
+Moving 
+
+    todo_list.first.move_lower(2)
+
+
+-- Todo 1 --      --\       -- Todo 2 --
+-- Todo 2 --         \      -- Todo 3 --
+-- Todo 3 --          \--   -- Todo 1 --
+-- Todo 4 --                -- Todo 4 --
+
+
+Copyright (c) 2007 David Heinemeier Hansson, released under the MIT license
+Copyright (c) 2010 Olexiy Zamkoviy, released under the MIT license
