@@ -15,6 +15,11 @@ class QaController < ApplicationController
       if params[:questions_answers_params]
         @period = QuestionsAnswersParams.find_or_create_by_name('period')
         if @period && @period.update_attributes!(params[:questions_answers_params])
+          QuestionsAnswersNew.transaction do
+            QuestionsAnswersNew.all.each do |item|
+              item.update_attributes! :eta => (Date.today + (item.position * @period.value.to_i).days)
+            end
+          end
           flash[:period_notice] = "Successfully updated period"
           redirect_to root_url
         end
