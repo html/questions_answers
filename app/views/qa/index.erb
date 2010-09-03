@@ -1,7 +1,8 @@
 <% if @existing.empty? %>
-  There are no existing questions/answers
+  There are no existing questions/answers found
 <% else %>
-  <table>
+  Existing questions/answers:
+  <table border="1">
     <tr>
       <td>Question</td>
       <td>Answer</td>
@@ -16,9 +17,9 @@
 <% end %>
 <br/>
 <% if @new.empty? %>
-  There are new questions/answers
+  No new questions/answers found
 <% else %>
-  <table>
+  <table border="1">
     <tr>
       <td>Question</td>
       <td>Answer</td>
@@ -43,6 +44,16 @@
   <p>
   Answer <br />
   <%= f.text_area :answer, :rows => 5 %>
+  </p>
+  <%= f.submit %>
+<% end %>
+
+Change period: <br/>
+<% form_for @period || :questions_answers_params, :html => { :method => :post }, :url => root_url do |f| %>
+  <%= f.error_messages %>
+  <p>
+    Period:<br />
+    <%= f.text_field :value %>
   </p>
   <%= f.submit %>
 <% end %>

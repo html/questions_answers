@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 2) do
+ActiveRecord::Schema.define(:version => 4) do
 
   create_table "questions_answers_existing", :force => true do |t|
     t.text     "question",   :null => false
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(:version => 2) do
     t.text     "answer"
     t.integer  "position"
     t.date     "eta"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "questions_answers_params", :force => true do |t|
+    t.string   "name"
+    t.string   "value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
